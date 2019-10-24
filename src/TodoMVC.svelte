@@ -40,13 +40,15 @@
     }));
   }
 
-  function createNew(event) {
+  async function createNew(event) {
     if (event.which === ENTER_KEY) {
       items = items.concat({
         id: uuid(),
         description: event.target.value,
         completed: false,
-        score: getSentiment(event.target.value).then(r => makePrediction(r))
+        score: await getSentiment(event.target.value).then(r =>
+          makePrediction(r)
+        )
       });
       event.target.value = "";
     }
@@ -64,7 +66,8 @@
 
   function makePrediction(r) {
     const [d_score, r_score] = r[0];
-    const prediction = d_score > r_score ? "D" : "R";
+    const prediction =
+      d_score > r_score ? d_score + "% " + "D" : r_score + "% " + "R";
     return prediction;
   }
 

@@ -45,10 +45,21 @@
       items = items.concat({
         id: uuid(),
         description: event.target.value,
-        completed: false
+        completed: false,
+        score: getSentiment(event.target.value).then(result => result[0][0])
       });
       event.target.value = "";
     }
+  }
+
+  async function getSentiment(draft_tweet) {
+    const response = await fetch("https://redtweetbluetweet.ngrok.io/predict", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ text: draft_tweet })
+    });
+    const json = await response.json();
+    return json;
   }
 
   function handleEdit(event) {
@@ -117,7 +128,7 @@
               type="checkbox"
               bind:checked={item.completed} />
             <label on:dblclick={() => (editing = index)}>
-              {item.description}
+              {item.description} {item.score}
             </label>
             <button on:click={() => remove(index)} class="destroy" />
           </div>

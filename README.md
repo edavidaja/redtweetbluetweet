@@ -1,5 +1,5 @@
-# svelte-todomvc
+# red tweet, blue tweet
 
-**[svelte-todomvc.surge.sh](http://svelte-todomvc.surge.sh/)**
+front end for redtweetbluetweet
 
-[TodoMVC](http://todomvc.com/) implemented in [Svelte](https://github.com/sveltejs/svelte). The entire app weighs 3.5kb zipped.
+based on svelte-todomvc

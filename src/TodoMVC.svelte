@@ -67,7 +67,9 @@
   function makePrediction(r) {
     const [d_score, r_score] = r[0];
     const prediction =
-      d_score > r_score ? d_score + "% " + "D" : r_score + "% " + "R";
+      d_score > r_score
+        ? `${Math.round(d_score * 100)}% D`
+        : `${Math.round(r_score * 100)}% R`;
     return prediction;
   }
 

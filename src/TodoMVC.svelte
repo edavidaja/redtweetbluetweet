@@ -46,7 +46,7 @@
         id: uuid(),
         description: event.target.value,
         completed: false,
-        score: getSentiment(event.target.value).then(result => result[0][0])
+        score: getSentiment(event.target.value).then(r => makePrediction(r))
       });
       event.target.value = "";
     }
@@ -60,6 +60,12 @@
     });
     const json = await response.json();
     return json;
+  }
+
+  function makePrediction(r) {
+    const [d_score, r_score] = r[0];
+    const prediction = d_score > r_score ? "D" : "R";
+    return prediction;
   }
 
   function handleEdit(event) {

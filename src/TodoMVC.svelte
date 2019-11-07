@@ -55,7 +55,7 @@
   }
 
   async function getSentiment(draft_tweet) {
-    const response = await fetch("https://redtweetbluetweet.ngrok.io/predict", {
+    const response = await fetch("https://redtweetbluetweet.appspot.com/predict", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ text: draft_tweet })

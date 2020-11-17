@@ -1,0 +1,12 @@
+name: redtweetbluetweet
+title: redtweetbluetweet
+username: david
+account: david
+server: colorado.rstudio.com
+hostUrl: https://colorado.rstudio.com/rsc/__api__
+appId: 7792
+bundleId: 41539
+url: https://colorado.rstudio.com/rsc/content/7792/
+when: 1605650034.90153
+asMultiple: FALSE
+asStatic: TRUE

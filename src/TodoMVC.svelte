@@ -55,7 +55,7 @@
   }
 
   async function getSentiment(draft_tweet) {
-    const response = await fetch("https://redtweetbluetweet.appspot.com/predict", {
+    const response = await fetch("https://colorado.rstudio.com/rsc/rtbt/predict", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ text: draft_tweet })

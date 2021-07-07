@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "locale": "en_US",
+  "platform": "4.0.2",
+  "metadata": {
+    "appmode": "static",
+    "primary_rmd": null,
+    "primary_html": "index.html",
+    "content_category": null,
+    "has_parameters": false
+  },
+  "packages": null,
+  "files": {
+    "bundle.js": {
+      "checksum": "d789c0dc0e7444f4988e60eadee8d99e"
+    },
+    "bundle.js.map": {
+      "checksum": "f6572dba028a40145d1fe563ab34ae81"
+    },
+    "index.html": {
+      "checksum": "776e45a1e19ec5299a9023fb4fa6cc3d"
+    },
+    "todomvc-app-css.css": {
+      "checksum": "96b6e2a9276a723d5f97ba2f1db04735"
+    },
+    "todomvc-common.css": {
+      "checksum": "fdb11056de60b06dc72e652dd8cb0027"
+    },
+    "todomvc-common.js": {
+      "checksum": "d0eae1ed10a775f651fc159c25a27328"
+    }
+  },
+  "users": null
+}
